@@ -9,6 +9,7 @@
   --nav: rgb(230, 172, 118);
   --nav-dark: rgb(187, 140, 96);
   --font: rgb(131, 63, 0);
+  --header-dark: rgb(106, 175, 192);
 }
 
 body, html {
@@ -27,13 +28,34 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 0 20px 0 20px;
   color: white;
+  
+  h1 {
+    font-family:'Trebuchet MS';
+    font-size: 2.5rem;
+  }
+
+  .buttons {
+    display: flex;
+  }
+
+  button {
+    border: none;
+    padding: 30px 20px 30px 20px;
+    color: white;
+    font-size: 1.5rem;
+    background-color: var(--header);
+  }
+
+  button:hover {
+    background-color: var(--header-dark);
+  }
 }
 
 button:hover {
-      cursor: pointer;
-    }
+  cursor: pointer;
+}
 
 nav {
   display: grid;
