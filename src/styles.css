@@ -7,6 +7,7 @@
 :root {
   --header: rgb(128, 217, 240);
   --nav: rgb(230, 172, 118);
+  --nav-dark: rgb(187, 140, 96);
   --font: rgb(131, 63, 0);
 }
 
@@ -23,13 +24,39 @@ body {
 header {
   grid-column: 1 / -1;
   background-color: var(--header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: white;
 }
+
+button:hover {
+      cursor: pointer;
+    }
 
 nav {
   display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
   align-items: center;
   background-color: var(--nav);
   padding: 20px;
+  color: var(--font);
+  text-align: center;
+
+
+  .chef-hat {
+    width: 100%;
+    height: 225px;
+    background-color: var(--font);
+    mask-image: url('chef-hat.svg');
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  h2 {
+    font-family: cursive;
+  }
 
   .buttons {
     display: flex;
@@ -45,7 +72,7 @@ nav {
     }
 
     button:hover {
-      cursor: pointer;
+      background-color: var(--nav-dark);
     }
   }
 }
